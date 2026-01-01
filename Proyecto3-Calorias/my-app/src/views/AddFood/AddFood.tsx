@@ -51,7 +51,7 @@ const AddFood = () => {
 }
 const styles = StyleSheet.create({
         container: {
-            padding: 12,
+            padding: 13,
 
         },
         legendContainer: {
