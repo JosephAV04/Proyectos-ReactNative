@@ -9,10 +9,10 @@ type AddFoodModalProps = {
 
 const AddFoodModal: FC<AddFoodModalProps> = ({onClose, visible}) => {
     return(
-        <Modal visible = {visible} onRequestClose = {onClose} transparent>
+        <Modal visible = {visible} onRequestClose = {onClose} transparent animationType='slide'>
             <View style = {styles.container}>
                 <View style = {styles.content}>
-                    <Button icon={<Icon name='close' /> } onPress={onClose} type="clear" />
+                    <Button icon={<Icon name='close' type="material-community" size={25}/> } onPress={onClose} type="clear" />
                 </View>
             </View>
         </Modal>
@@ -26,13 +26,22 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'rgba(0,0,0,0,0.5)'
+        backgroundColor: 'rgba(0,0,0,0.5)'
     },
     content:{
+        
         width: '75%',
         backgroundColor: '#fff',
         padding: 18,
-        margin: 24,
+        borderRadius: 24,
+        shadowColor: '#000',
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 4,
+        elevation: 5,
     },
 })
 export default AddFoodModal;

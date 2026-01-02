@@ -12,12 +12,13 @@ const staticInfo = {
 const Header = () => {
     const {canGoBack, goBack} = useNavigation();
 
-    return (
+    return (        
         <View style={styles.container}> 
             {canGoBack() ? (                // boton de volver para atras 
                 <View style = {styles.arrowContainer}> 
                     <Button icon= {<Icon name="arrow-back" 
-                    size={24} />} type = "clear" 
+                    size={24} />} 
+                    type = "clear"
                     onPress={() => goBack()}/>
                     </View>
             ): undefined }

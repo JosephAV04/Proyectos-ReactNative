@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text,StyleSheet } from 'react-native';
+import {SafeAreaView, View, Text,StyleSheet } from 'react-native';
 
 import Header from '../../components/Header/Header';
 import { Button, Icon  } from '@rneui/themed';
@@ -14,10 +14,7 @@ const Home = () => {
 
         navigate('AddFood');
 
-
     }
-
-
     return (
         <View style = {styles.container}>
             
@@ -49,13 +46,9 @@ const Home = () => {
 
 const styles = StyleSheet.create({
     container: {
-
-
         backgroundColor: '#fff',
         flex: 1,
         padding: 12,
-
-
 
     },
     caloriesLegend:{
