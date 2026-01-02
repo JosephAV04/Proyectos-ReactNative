@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { Text, View , StyleSheet} from 'react-native'
 import Header from '../../components/Header'
-import { Button, Input } from '@rneui/themed'
-import { Icon } from '@rneui/base'
+import { Button, Icon, Input } from '@rneui/themed'
+//import {  } from '@rneui/base'
 import AddFoodModal from '../../components/AddFoodModal'
 
 const AddFood = () => {
@@ -14,6 +14,7 @@ const AddFood = () => {
     }
 
     return(
+    
     <View style = {styles.container}>
         <Header />
         <View style = {styles.addFoodContainer}>
@@ -23,26 +24,26 @@ const AddFood = () => {
             <View style = {styles.addFoodBtnContainer}>
                 <Button icon={<Icon 
                     color = '#fff' 
-                    name="add-circle-outline" />}  
-                    radius = "lg" 
+                    name="add-circle-outline" 
+                    type="clear" 
+                    />}  
+                    radius = "lg"                    
                     color = "#4ecb71"
                     onPress = {() => setIsVisible(true)}
                 />
             </View>
-
         </View>
-
+        
         <View style = {styles.searchContainer}>
             <View style = {styles.inputContainer}>
                 <Input placeholder = 'apples, pie, soda...'/>
             </View>
-
             <Button title = 'Search' 
-            color = '#ade8af' 
-            titleStyle={styles.searchBtnTitle}
-            radius = "lg" 
-            onPress = {() => setIsVisible(true)}/>
-                
+                color = '#ade8af' 
+                titleStyle={styles.searchBtnTitle}
+                radius = "lg" 
+                onPress = {() => setIsVisible(true)}
+            />                
         </View>
 
         <AddFoodModal visible = {visible} onClose = {handleModalClose}/>
@@ -51,11 +52,13 @@ const AddFood = () => {
 }
 const styles = StyleSheet.create({
         container: {
-            padding: 13,
+            padding: 12,
 
         },
         legendContainer: {
             flex: 1,
+            
+
         },
         addFoodBtnContainer: {
             flex: 1,
@@ -70,6 +73,8 @@ const styles = StyleSheet.create({
         },
         addFoodLegends:{
             fontSize: 20,
+            fontWeight: 'bold',
+
         },
         searchContainer: {
             flexDirection: 'row',
